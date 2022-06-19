@@ -77,7 +77,8 @@
         height: 100vh
         padding: 20px 15px
         background-color: rgba(0, 0, 0, .8)
-        transition: 0.6 all
+        transition: 0.5s all
+        z-index: 2
         &_active
             left: 0
         &_item
@@ -86,6 +87,51 @@
             margin: 10px 0
         &_link
             font-size: 20px
+    .hamburger
+        display: block
+        position: absolute
+        right: 10px
+        top: 50%
+        transform: translateY(-50%)
+        width: 26px
+        height: 12px
+        span
+            display: block
+            height: 2px
+            width: 100%
+            background-color: #fff
+            margin-bottom: 2px
+            transition: 0.5s all
+        &_active
+            span
+                margin-bottom: -2px
+                &:nth-child(1)
+                    transform: translate(3px) rotate(-45deg)
+                &:nth-child(2)
+                    display: none
+                &:nth-child(3)
+                    transform: translate(3px) rotate(45deg)
+    .xs-hidden
+        display: none
+    .xs-visible
+        display: block
+    .subheader
+        &_phone
+            display: block
+            margin-top: 10px
+            font-weight: 400
+            font-size: 16px
+            color: #FFFFFF
+            text-transform: uppercase
+            text-align: center
+        &_btn
+            display: block
+            width: 200px
+            height: 40px
+            margin: 10px auto 0
+    .promo
+        &_header
+            line-height: 50px
     .choice
         &_img
             width: 100%
