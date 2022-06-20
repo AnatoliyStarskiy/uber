@@ -99,6 +99,13 @@
                 justify-content: center
 
 @media (max-width: 767px)
+    nav
+        position: fixed
+        top: 0
+        left: 0
+        width: 100%
+        z-index: 2
+
     .menu
         position: fixed
         flex-direction: column
@@ -118,6 +125,11 @@
             padding-right: 0
             border: none
             margin: 10px 0
+            width: 100%
+            a
+                &:hover
+                    color: $main-color
+                    text-decoration: none
         &_link
             font-size: 20px
     .hamburger
@@ -149,6 +161,7 @@
     .xs-visible
         display: block
     .subheader
+        margin-top: 49px
         &_phone
             display: block
             margin-top: 10px
@@ -174,9 +187,18 @@
         height: 50px
     header
         height: 50px
+    .menu
+        width: 85%
+        &_item
+            width: 100%
+            text-align: center
+            padding: 5px 0
+        &_link
+            display: block
+            
     .subheader
         height: 60px
-        top: 50px
+        top: 0px
         &_official
             display: none
         &_logo
@@ -261,12 +283,12 @@
             height: 322px
         .title
             &_white
-            font-weight: 700
-            font-size: 16px
+                font-weight: 700
+                font-size: 16px
         .subtitle
             &_white
-            font-weight: 400
-            font-size: 14px
+                font-weight: 400
+                font-size: 14px
     footer
         padding: 25px 0 20px 0
     .footer
